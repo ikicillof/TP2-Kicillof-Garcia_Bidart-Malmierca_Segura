@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../imagenes/emblema_-_pn_iguazu.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="Titulo">Contactos</h1>    
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./flora.html">Flora</a></li>
+                <li class="activado"><a href="./fauna.html">Fauna</a></li>
+                <li><a href="./excruciones.html">Excurciones</a></li>
+                <li><a href="contac.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+     <div id="contactos-pag">
+         <div class="form-container">
+            <h2>Formulario de Contacto</h2>
+            <form onsubmit="validarFormulario(event)">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required>
+    
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" required>
+    
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+    
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="3" required></textarea>
+    
+                <div class="terms">
+                    <input type="checkbox" id="terminos">
+                    <label for="terminos">Acepto los <a href="./terminosCondiciones.html">Términos y Condiciones </a></label>
+                </div>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+     </div>
+
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault();
+            const check = document.getElementById('terminos');
+            if (!check.checked) {
+                alert("Debes aceptar los Términos y Condiciones antes de continuar.");
+                return;
+            }
+            location.reload(); // reinicia la página
+        }
+    </script>
+
+
+
+    <footer>
+        <section>
+        <nav>
+            <ul>
+                <li> <a href="../index.html">Inicio</a></li>
+                <li><a href="./flora.html">Flora</a></li>
+                <li><a href="./fauna.html">Fauna</a></li>
+                <li><a href="./excruciones.html">Excurciones</a></li>
+                <li class="activo"><a href="./contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+        </section>
+        <section>
+            <ul>
+                <li><a href="https://www.instagram.com/parque.nacional.iguazu/?hl=es"></a> <img src="../imagenes/instagram.svg"></li>
+                <li><a href="https://www.facebook.com/ParqueNacIguazu/?locale=es_LA"></a> <img src="../imagenes/facebook.svg" alt=""></li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li><p>© Copyright 2025, Parque Nacional Iguazú. Todos los derechos reservados</p></li>
+                <li id="logoFotter"><img src="../imagenes/emblema_-_pn_iguazu.png"></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

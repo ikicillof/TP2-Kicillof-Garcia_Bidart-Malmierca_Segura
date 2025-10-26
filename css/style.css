@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(223, 205, 176);
+}
+
+p {
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+header {
+    background-color: #022601;
+}
+
+header h1 {
+    color: #F2EEEB;
+    text-align: center;
+    padding: 1rem;
+}
+
+header nav {
+   background-color: #9BA649;
+   height: 45px;
+   display: flex;
+   justify-content: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    display: flex;
+    position: relative;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #403332;
+    text-decoration: none;
+    transition: 0.25s all;
+    /* tipografia negrita */
+    font-weight: bold;
+    border-bottom: 0.25rem transparent solid;
+}
+
+header nav ul li a:hover {
+    background-color: #6b7239;
+}
+
+header nav ul li a.activo {
+    border-color: #022601;
+    /*no registra eventos como el hover o click*/
+    pointer-events: none;
+    color: #251312;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    justify-content: center;
+}
+
+main h2 {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.mapa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    border: #022601 solid 0.25rem;
+    border-radius: 1rem;
+    /* oculta lo que sobresale del contenedor en este caso las esquinas de la imagen */
+    overflow: hidden;
+}
+
+.mapa iframe {
+    width: 100%;
+}
+
+.mapa p {
+    padding: 1.5rem;
+    justify-content: center;    
+}
+
+.carrusel {
+    background-image: url(../imagenes/mapa.jpg);
+    /* lo que no entra se oculta */
+    background-size: cover;
+    /* centra la imagen en el fondo */
+    background-position: center;
+    /* si hay espacoi disponible no repite la imagen */
+    background-repeat: no-repeat;
+
+    width: 80%;
+    border: #022601 solid 0.25rem;
+    border-radius: 1rem;
+    /* oculta lo que sobresale del contenedor en este caso las esquinas de la imagen */
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel section {
+    color: #F2EEEB;
+    padding: 1rem 75% 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 75%);
+}
+
+.carrusel ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.carrusel ul li {
+    display: flex;
+}
+
+.carrusel ul button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 0.25rem;
+    width: 3rem;
+    border-radius: 0.25rem;
+    /* aparece la manito para cliquear */
+    cursor: pointer;
+}
+
+/* falta un hover */
+
+/* si no dejas espacio entre elementos significa que estan al mismo nivel y no son desendientes */
+.carrusel ul button.activo {
+    background-color: white;
+}
+
+#imagenes-s {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+#imagenes-s figure {
+    width: 16.6666666666%;
+    height: 10rem;
+}
+
+#imagenes-s img {
+    height: 100%;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+footer {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    background-color: #022601;
+    border: #403332 solid 0.25rem;
+    color: white;
+}
+
+
+footer section {
+    display: flex;
+    justify-content: center;
+}
+
+footer section nav ul li {
+    display: flex;
+    gap: 1rem;
+}
+
+footer section nav ul li:not(:last-child)::after {
+    content: "|";
+    color: white;
+    opacity: 0.25;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+footer ul img {
+    transition: all 0.25s ease;
+    box-shadow: unset;
+}
+
+footer ul img:hover {
+    transform: scale(1.05);
+}
+
+#logoFotter img{
+    height: 3rem;
+}
+
+#contactos-pag {
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #403332;
+    border-radius: 30%; /* forma ovalada */
+    height: 30rem;
+    width: 39.88rem;
+    padding: 3.5rem;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* evita que nada se salga del óvalo */
+    border: #6b7239 0.25rem solid;
+}
+
+.form-container h2 {
+    margin-bottom: 0.625rem;
+    color: white;
+    text-align: center;
+}
+
+form {
+    width: 85%;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.0625rem;
+    font-weight: bold;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid #ccc;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.8125rem;
+    line-height: 1.2;
+}
+
+.term {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.term a {
+    text-decoration: none;
+    color: #251312;
+}
+
+.term a:hover {
+    background-color: #6b7239;
+    border-radius: 0.25rem;
+}
+
+.term p {
+    display: flex;
+    width: 30%;
+
+}
+
+.terms input {
+    margin-right: 0.3125rem;
+    transform: scale(1.1); /* un poco más grande y centrado */
+}
+
+.terms label {
+    margin: 0;
+    font-weight: normal;
+}
+
+button {
+    width: 100%;
+    padding: 0.625rem;
+    background-color: #3c4a5a;
+    color: white;
+    border: none;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+.terms label a {
+    text-decoration: none;
+    color: gray;
+}
+
+.galeria {
+    padding: 2.5rem 7rem;
+    background-color: wheat;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 3rem; 
+    justify-items: center;
+}
+
+#grid-container .tarjeta {
+    perspective: 800px;
+    perspective-origin: center;
+    position: relative;
+    width: 20rem;
+    height: 18rem;
+    transition: all 0.25s ease;
+}
+
+#grid-container .tarjeta:hover {
+    transform: scale(1.05);
+}
+
+#grid-container .tarjeta * {
+    pointer-events: none;
+}
+
+#grid-container .tarjeta .interno {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    position: relative;
+}
+
+#grid-container .tarjeta.activa .interno {
+    transform: rotate3d(0, 1, 0, 180deg)
+}
+
+#grid-container .tarjeta .interno figure,
+#grid-container .tarjeta .interno p {
+    display: flex;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#grid-container .tarjeta .interno p {
+    padding: 1rem;
+    transform: rotate3d(0, 1, 0, 180deg);
+    background-color: #6b7239;
+    color: wheat;
+}
+
+#grid-container .tarjeta .interno figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#grid-container .tarjeta .interno figure figcaption {
+    display: flex;
+    position: absolute;
+    border-radius: 0.125rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    right: 0.25rem;
+    color: wheat;
+    padding: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.25rem);
+}
+
+.header h2 {
+    padding-left: 5rem;
+    padding-top: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.header h2+p {
+    padding-left: 5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    max-width: 45rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: wheat;
+}
