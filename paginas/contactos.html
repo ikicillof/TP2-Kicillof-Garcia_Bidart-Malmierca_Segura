@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="icon" href="../imagenes/emblema_-_pn_iguazu.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,27 @@
 </head>
 <body>
     <header>
-        <h1 id="Titulo">Contactos</h1>    
+        <h1 id="Titulo">Contactos</h1>
+        
         <nav>
+
+        <label for="menu-toggle">
+                <span class="material-symbols-outlined">menu</span>
+        </label>
+            
+        <input type="checkbox" id="menu-toggle">
+
             <ul>
+                <li class="close">
+                    <label for="menu-toggle">
+                        <span class="material-symbols-outlined">close</span>
+                    </label>
+                </li>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./flora.html">Flora</a></li>
-                <li class="activado"><a href="./fauna.html">Fauna</a></li>
-                <li><a href="./excruciones.html">Excurciones</a></li>
-                <li><a href="contac.html">Contactos</a></li>
+                <li><a href="./fauna.html">Fauna</a></li>
+                <li><a href="./excursiones.html">Excursiones</a></li>
+                <li><a class="activo" href="./contactos.html">Contactos</a></li>
             </ul>
         </nav>
     </header>
@@ -68,15 +82,15 @@
                 <li> <a href="../index.html">Inicio</a></li>
                 <li><a href="./flora.html">Flora</a></li>
                 <li><a href="./fauna.html">Fauna</a></li>
-                <li><a href="./excruciones.html">Excurciones</a></li>
+                <li><a href="./excursiones.html">Excursiones</a></li>
                 <li class="activo"><a href="./contactos.html">Contactos</a></li>
             </ul>
         </nav>
         </section>
         <section>
             <ul>
-                <li><a href="https://www.instagram.com/parque.nacional.iguazu/?hl=es"></a> <img src="../imagenes/instagram.svg"></li>
-                <li><a href="https://www.facebook.com/ParqueNacIguazu/?locale=es_LA"></a> <img src="../imagenes/facebook.svg" alt=""></li>
+                <li><a href="https://www.instagram.com/parque.nacional.iguazu/?hl=es"><img src="../imagenes/instagram.svg"></a></li>
+                <li><a href="https://www.facebook.com/ParqueNacIguazu/?locale=es_LA"><img src="../imagenes/facebook.svg"></a></li>
             </ul>
         </section>
         <section>
