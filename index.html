@@ -1,125 +1,198 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <link rel="icon" href="imagenes/emblema_-_pn_iguazu.png" type="image/png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parque Nacional Iguazu</title>
+	<link href="imagenes/emblema_-_pn_iguazu.png" rel="icon" type="image/png"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet"/>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>Parque Nacional Iguazu</title>
 </head>
 <body>
-    <header>
-        <h1>Parque Nacional Iguazu</h1>    
-        <nav>
-            <label for="menu-toggle">
-                <span class="material-symbols-outlined">menu</span>
-            </label>
-            
-            <input type="checkbox" id="menu-toggle">
-
-            <ul>
-                <li class="close">
-                    <label for="menu-toggle">
-                        <span class="material-symbols-outlined">close</span>
-                    </label>
-                </li>
-                <li ><a class="activo" href="./index.html">Inicio</a></li>
-                <li><a href="paginas/flora.html">Flora</a></li>
-                <li><a href="paginas/fauna.html">Fauna</a></li>
-                <li><a href="paginas/excursiones.html">Excursiones</a></li>
-                <li><a href="paginas/contactos.html">Contactos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Ubicación</h2>
-        <div class="mapa">
-            <p>
-                El Parque Nacional Iguazú está ubicado en el noreste de Argentina, 
-                en la provincia de Misiones, cerca de la frontera con Brasil. 
-                Se encuentra a unos 17 km de la ciudad de Puerto Iguazú, en una zona de selva subtropical densa y húmeda. 
-                El río Iguazú atraviesa esta región, formando las famosas cataratas. El acceso principal es desde Puerto Iguazú, 
-                a través de rutas que conectan con otras ciudades de Argentina y países vecinos.
-            </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4499.9950418414655!2d-54.45567666280236!3d-25.683863253590523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6ea41eb9d9119%3A0x2ab8d74e979dc0a2!2sParque%20Nacional%20Iguaz%C3%BA!5e0!3m2!1ses-419!2sar!4v1761095720069!5m2!1ses-419!2sar"
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-        <div id="imagenes-s">
-            <figure><img src="imagenes/imagen-s1.jpeg"></figure>
-            <figure><img src="imagenes/imagen-s2.jpg"></figure>
-            <figure><img src="imagenes/imagenes-s3.jpg"></figure>
-            <figure><img src="imagenes/imagenes-s4.jpg"></figure>
-            <figure><img src="imagenes/imagenes-s5.jpg"></figure>
-            <figure><img src="imagenes/imagenes-s6.jpg"></figure>
-        </div>
-
-        <h2>Importancia</h2>
-        <div class="carrusel">
-            <section>
-                <h3>Lorem ipsum dolor</h3>
-                <p>
-                    El Parque Nacional Iguazú es crucial por su biodiversidad única y por albergar las Cataratas del Iguazú, 
-                    una de las Siete Maravillas Naturales del Mundo. Es un patrimonio de la humanidad, clave para la conservación 
-                    de la selva subtropical.  El Parque Nacional fue creado en 1934 y declarado  Sitio de Patrimonio Mundial  por 
-                    la UNESCO en 1984. También recibió la mención de Área de Importancia para la Protección de las Aves (AICA).
-                </p>
-            </section>
-            <ul>
-                <li><button class="activo"></button></li>
-                <li><button></button></li>
-                <li><button></button></li>
-            </ul>
-        </div>
-
-    </main>
-
-    <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li ><a class="activo" href="./index.html">Inicio</a></li>
-                    <li><a href="paginas/flora.html">Flora</a></li>
-                    <li><a href="paginas/fauna.html">Fauna</a></li>
-                    <li><a href="paginas/excursiones.html">Excursiones</a></li>
-                    <li><a href="paginas/contactos.html">Contactos</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section>
-            <ul>
-                <li><a href="https://www.instagram.com/parque.nacional.iguazu/?hl=es"><img src="imagenes/instagram.svg"></a></li>
-                <li><a href="https://www.facebook.com/ParqueNacIguazu/?locale=es_LA"><img src="imagenes/facebook.svg"></a></li>
-            </ul>
-        </section>
-        <section>
-            <ul>
-                <li><p>© Copyright 2025, Parque Nacional Iguazú. Todos los derechos reservados</p></li>
-                <li id="logoFotter"><img src="imagenes/emblema_-_pn_iguazu.png"></li>
-            </ul>
-        </section>
-    </footer>
+	<header>
+		<div>
+			<h1>Parque Nacional Iguazu</h1>
+			<img id="imagenHeder" src="imagenes/emblema_-_pn_iguazu.png">
+		</div>
+		<nav>
+			<label for="menu-toggle">
+				<span class="material-symbols-outlined">menu</span>
+			</label>
+			<input id="menu-toggle" type="checkbox"/>
+			<ul>
+				<li class="close">
+					<label for="menu-toggle">
+						<span class="material-symbols-outlined">close</span>
+					</label>
+				</li>
+				<li><a class="activo" href="./index.html">Inicio</a></li>
+				<li><a href="paginas/flora.html">Flora</a></li>
+				<li><a href="paginas/fauna.html">Fauna</a></li>
+				<li><a href="paginas/excursiones.html">Excursiones</a></li>
+				<li><a href="paginas/contactos.html">Contactos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Ubicación</h2>
+		<div class="mapa">
+			<p>
+				El Parque Nacional Iguazú está ubicado en el noreste de Argentina, 
+				en la provincia de Misiones, cerca de la frontera con Brasil. 
+				Se encuentra a unos 17 km de la ciudad de Puerto Iguazú, en una zona de selva subtropical densa y húmeda. 
+				El río Iguazú atraviesa esta región, formando las famosas cataratas. El acceso principal es desde Puerto Iguazú, 
+				a través de rutas que conectan con otras ciudades de Argentina y países vecinos.
+			</p>
+			<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4499.9950418414655!2d-54.45567666280236!3d-25.683863253590523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6ea41eb9d9119%3A0x2ab8d74e979dc0a2!2sParque%20Nacional%20Iguaz%C3%BA!5e0!3m2!1ses-419!2sar!4v1761095720069!5m2!1ses-419!2sar" style="border:0;" width="600"></iframe>
+		</div>
+		<div id="imagenes-s">
+			<figure><img src="imagenes/imagen-s1.jpeg"/></figure>
+			<figure><img src="imagenes/imagen-s2.jpg"/></figure>
+			<figure><img src="imagenes/imagenes-s3.jpg"/></figure>
+			<figure><img src="imagenes/imagenes-s4.jpg"/></figure>
+			<figure><img src="imagenes/imagenes-s5.jpg"/></figure>
+			<figure><img src="imagenes/imagenes-s6.jpg"/></figure>
+		</div>
+		<h2>Importancia</h2>
+		<section class="carousel">
+			<div class="slides">
+				<article class="slide" style="background-image: url('imagenes/imagencarrusel1.jpeg');">
+					<div class="overlay">
+						<h3 class="slide-title">Biodivercidad</h3>
+						<p class="slide-text">El Parque Nacional Iguazú es un refugio natural que protege una gran variedad de especies animales y vegetales.
+							En sus bosques subtropicales habitan animales como el yaguareté, tucanes y monos aulladores, muchos de ellos en peligro de extinción.
+							Esta diversidad lo convierte en un espacio fundamental para la conservación de la naturaleza.
+						</p>
+					</div>
+				</article>
+				<article class="slide" style="background-image: url('imagenes/imagencarrusel3.jpeg');">
+					<div class="overlay">
+						<h3 class="slide-title">Patrimonio natural de la humanidad</h3>
+						<p class="slide-text">En 1984, la UNESCO declaró al Parque Nacional Iguazú como Patrimonio de la Humanidad por su valor ecológico y paisajístico.
+							Sus famosas cataratas, consideradas una de las maravillas naturales del mundo, atraen la atención por su magnitud y belleza, 
+							siendo un símbolo natural de Argentina.
+						</p>
+					</div>
+				</article>
+				<article class="slide" style="background-image: url('imagenes/imagencarrusel2.jpeg');">
+					<div class="overlay">
+						<h3 class="slide-title">Turismo y desarrollo sostenible</h3>
+						<p class="slide-text">El parque es un importante destino turístico que recibe millones de visitantes cada año. 
+							Este turismo genera empleo y promueve el desarrollo económico local, al tiempo que fomenta la protección del medio ambiente y la 
+							educación ambiental para conservar este tesoro natural a largo plazo.
+						</p>
+					</div>
+				</article>
+			</div>
+			<div class="indicators">
+				<div class="bar active"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<section>
+			<nav>
+				<ul>
+					<li><a class="activo" href="./index.html">Inicio</a></li>
+					<li><a href="paginas/flora.html">Flora</a></li>
+					<li><a href="paginas/fauna.html">Fauna</a></li>
+					<li><a href="paginas/excursiones.html">Excursiones</a></li>
+					<li><a href="paginas/contactos.html">Contactos</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section>
+			<ul>
+				<li><a href="https://www.instagram.com/parque.nacional.iguazu/?hl=es"><img src="imagenes/instagram.svg"/></a></li>
+				<li><a href="https://www.facebook.com/ParqueNacIguazu/?locale=es_LA"><img src="imagenes/facebook.svg"/></a></li>
+			</ul>
+		</section>
+		<section>
+			<ul>
+				<li><p>© Copyright 2025, Parque Nacional Iguazú. Todos los derechos reservados</p></li>
+				<li id="logoFotter"><img src="imagenes/emblema_-_pn_iguazu.png"/></li>
+			</ul>
+		</section>
+	</footer>
+	<script>
+		// Carrusel assistant
+		(function(){
+			const carousel = document.querySelector('.carousel');
+			if(!carousel) return;
+			const slidesWrapper = carousel.querySelector('.slides');
+			const slides = Array.from(carousel.querySelectorAll('.slide'));
+			const indicators = Array.from(carousel.querySelectorAll('.bar'));
+			let index = 0;
+			const total = slides.length;
+			
+			function updatePosition(animated=true){
+				slidesWrapper.style.transition = animated ? '' : 'none';
+				slidesWrapper.style.transform = `translateX(-${index * carousel.clientWidth}px)`;
+			}
+			
+			function setIndex(i){
+				index = i % total;
+				updatePosition(true);
+				indicators.forEach((b,idx)=>b.classList.toggle('active', idx === index));
+			}
+			
+			indicators.forEach((b, i) => b.addEventListener('click', () => setIndex(i)));
+			
+			window.addEventListener('resize', ()=> updatePosition(false));
+			
+			// touch drag
+			let startX=0,currentX=0,isDragging=false,animId=null,threshold=60;
+			
+			function getClientX(e){
+				return e.touches?e.touches[0].clientX:e.clientX;
+			}
+			
+			function touchStart(e){
+				startX = getClientX(e);
+				currentX = startX;
+				isDragging = true;
+				slidesWrapper.style.transition = 'none';
+				animId = requestAnimationFrame(dragAnim);
+			}
+			
+			function touchMove(e){
+				if(!isDragging) return;
+				currentX = getClientX(e);
+			}
+			
+			function touchEnd(){
+				if(!isDragging) return;
+				isDragging = false;
+				cancelAnimationFrame(animId);
+				const moved = currentX-startX;
+				if(moved < -threshold) setIndex(index+1);
+				else if(moved > threshold) setIndex(index-1);
+				else updatePosition(true);
+			}
+			
+			function dragAnim(){
+				if(!isDragging) return;
+				const moved=currentX-startX;
+				const base = -index * carousel.clientWidth;
+				slidesWrapper.style.transform = `translateX(${base + moved}px)`;
+				animId = requestAnimationFrame(dragAnim);
+			}
+			
+			slidesWrapper.addEventListener('mousedown', touchStart);
+			slidesWrapper.addEventListener('mousemove', touchMove);
+			slidesWrapper.addEventListener('mouseup', touchEnd);
+			slidesWrapper.addEventListener('mouseleave', touchEnd);
+			slidesWrapper.addEventListener('touchstart', touchStart, {passive:true});
+			slidesWrapper.addEventListener('touchmove', touchMove, {passive:true});
+			slidesWrapper.addEventListener('touchend', touchEnd);
+			
+			// init
+			setIndex(0);
+		})();
+	</script>
 </body>
 </html>
-
-
-<!--1. Biodiversidad única
-El Parque Nacional Iguazú es un refugio natural que protege una gran variedad de especies animales y vegetales.
-En sus bosques subtropicales habitan animales como el yaguareté, tucanes y monos aulladores, muchos de ellos en peligro de extinción.
-Esta diversidad lo convierte en un espacio fundamental para la conservación de la naturaleza.
-
-2. Patrimonio natural de la humanidad
-En 1984, la UNESCO declaró al Parque Nacional Iguazú como Patrimonio de la Humanidad por su valor ecológico y paisajístico.
-Sus famosas cataratas, consideradas una de las maravillas naturales del mundo, atraen la atención por su magnitud y belleza, 
-siendo un símbolo natural de Argentina.
-
-3. Turismo y desarrollo sostenible
-El parque es un importante destino turístico que recibe millones de visitantes cada año. 
-Este turismo genera empleo y promueve el desarrollo económico local, al tiempo que fomenta la protección del medio ambiente y la 
-educación ambiental para conservar este tesoro natural a largo plazo. -->
+		

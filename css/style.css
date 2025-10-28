@@ -70,10 +70,25 @@ header {
     background-color: var(--negro);
 }
 
-header h1 {
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+header div h1 {
+    display: flex;
     color: var(--blanco);
     text-align: center;
     padding: 1rem;
+    justify-content: center;
+    flex: 1;
+}
+
+header div #imagenHeder {
+    height: 4.5rem;
+    display: flex;
 }
 
 header nav {
@@ -158,63 +173,95 @@ main h2 {
     justify-content: center;    
 }
 
-.carrusel {
-    background-image: url(../imagenes/mapa.jpg);
-    /* lo que no entra se oculta */
-    background-size: cover;
-    /* centra la imagen en el fondo */
-    background-position: center;
-    /* si hay espacoi disponible no repite la imagen */
-    background-repeat: no-repeat;
-
-    width: 80%;
-    border: var(--negro) solid 0.25rem;
-    border-radius: 1rem;
-    /* oculta lo que sobresale del contenedor en este caso las esquinas de la imagen */
-    overflow: hidden;
-    position: relative;
+.carousel {
+    border: 0.25rem solid black;
+    position:relative;
+    width:100%;
+    max-width:920px;
+    height:520px;
+    margin:20px auto;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
-.carrusel section {
+.slides {
+    display:flex;
+    height:100%;transition:
+    transform .7s cubic-bezier(.2,.9,.3,1);
+    touch-action:pan-y;
+}
+
+.slide {
+    min-width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+}
+
+.overlay {
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    padding:30px;
     color: var(--blanco);
-    padding: 1rem 75% 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: var(--gradiente-negro);
+    max-width: 300px;
 }
 
-.carrusel ul {
-    list-style: none;
-    display: flex;
-    gap: 0.5rem;
-    background-color: var(--color-sombra);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    position: absolute;
-    right: 0.5rem;
-    bottom: 0.5rem;
+.slide-title {
+    font-size:clamp(1.2rem,2.2vw,1.8rem);
+    font-weight:700;
+    margin-bottom:8px;
+    text-align:left;
 }
 
-.carrusel ul li {
-    display: flex;
+.slide-text {
+    font-size:clamp(.95rem,1.5vw,1.05rem);
+    max-width:420px;
+    text-align:left;
+    line-height:1.4;
 }
 
-.carrusel ul button {
-    border: none;
-    background-color: var(--luz);
-    height: 0.25rem;
-    width: 3rem;
-    border-radius: 0.25rem;
-    /* aparece la manito para cliquear */
+.indicators {
+    position:absolute;
+    bottom:18px;right:18px;
+    display:flex;
+    gap:6px;
+    z-index:10;
     cursor: pointer;
 }
 
-/* falta un hover */
+.bar {
+    width:30px;
+    height:5px;
+    background:rgba(255,255,255,0.35);
+    border-radius:3px;transition:all .25s ease;
+}
 
-/* si no dejas espacio entre elementos significa que estan al mismo nivel y no son desendientes */
-.carrusel ul button.activo {
-    background-color: white;
+.bar.active {
+    background:rgba(255,255,255,0.95);
+    transform:scaleY(1.1);
+}
+
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0;
+    background-color: var(--verde-oscuro);
+    z-index: 9999;
+    transition: width 2s ease-in-out;
+}
+
+.loading-bar.active {
+    width: 100%;
 }
 
 #imagenes-s {
@@ -244,7 +291,7 @@ footer {
     align-items: center;
     background-color: var(--negro);
     border: var(--marron) solid 0.25rem;
-    color: white;
+    color: var(--blanco);
 }
 
 
@@ -260,13 +307,13 @@ footer section nav ul li {
 
 footer section nav ul li:not(:last-child)::after {
     content: "|";
-    color: white;
+    color: var(--blanco);
     opacity: 0.25;
 }
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: var(--blanco);
 }
 
 footer ul {
@@ -312,7 +359,7 @@ footer ul img:hover {
 
 .form-container h2 {
     margin-bottom: 0.625rem;
-    color: white;
+    color: var(--blanco);
     text-align: center;
 }
 
@@ -325,7 +372,7 @@ label {
     display: block;
     margin-bottom: 0.0625rem;
     font-weight: bold;
-    color: white;
+    color: var(--blanco);
 }
 
 input, textarea {
@@ -354,11 +401,6 @@ input, textarea {
     margin-top: 3rem;
 }
 
-.term a {
-    text-decoration: none;
-    color: var(--negro-activo);
-}
-
 .term a:hover {
     background-color: var(--verde-oscuro);
     border-radius: 0.25rem;
@@ -384,7 +426,7 @@ button {
     width: 100%;
     padding: 0.625rem;
     background-color: var(--azul-oscuro);
-    color: white;
+    color: var(--blanco);
     border: none;
     border-radius: 0.625rem;
     font-size: 1rem;
@@ -396,14 +438,9 @@ button:hover {
     background-color: var(--azul);
 }
 
-.terms label a {
-    text-decoration: none;
-    color: gray;
-}
-
 .galeria {
     padding: 2.5rem 7rem;
-    background-color: wheat;
+    background-color: var(--crema);
 }
 
 #grid-container {
@@ -462,7 +499,7 @@ button:hover {
     padding: 1rem;
     transform: rotate3d(0, 1, 0, 180deg);
     background-color: var(--verde-oscuro);
-    color: wheat;
+    color: var(--crema);
 }
 
 #grid-container .tarjeta .interno figure img {
@@ -478,7 +515,7 @@ button:hover {
     bottom: 0.25rem;
     left: 0.25rem;
     right: 0.25rem;
-    color: wheat;
+    color: var(--crema);
     padding: 0.25rem;
     background-color: var(--color-sombra);
     backdrop-filter: blur(0.25rem);
@@ -502,9 +539,10 @@ button:hover {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    background-color: wheat;
+    background-color: var(--crema);
 }
 
+@media(max-width:480px){.carousel{height:360px}.slide-text{max-width:90%}}
 
 @media (max-width: 780px) {
 
@@ -515,12 +553,23 @@ button:hover {
     header {
         flex-direction: row-reverse;
         align-items: center;
+        justify-content: space-between;
         height: var(--header-altura);
     }
 
-    header h1 {
+    header div {
+        display: flex;
+        justify-content: center;
+    }
+
+    header div h1 {
         flex: 1;
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    header div #imagenHeder {
+        display: flex;
+        height: 3rem;
     }
 
     header nav {
@@ -546,6 +595,16 @@ button:hover {
         height: 100dvh;
         align-items: stretch;
         z-index: 2;
+        animation: menu 1s ease;
+    }
+
+    @keyframes menu {
+        from {
+            transform: translateX(-30vw);
+        }
+        to {
+            transform: translateX(0);
+        }
     }
 
     header nav ul li {
@@ -570,4 +629,58 @@ button:hover {
     header nav ul li a.activo {
     border-color: var(--negro);
 }
+
+    .carousel {
+        height:420px
+    }
+    
+    .overlay {
+        padding:18px
+    }
+    
+    .indicators {
+        bottom:12px;
+        right:12px
+    }
+.form-container {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Acomoda el formulario dentro */
+    #contactos-pag {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        padding-top: 6rem; /* para que no lo tape el menú */
+        padding-bottom: 3rem;
+    }
+
+    form {
+        width: 90%;
+        background-color: var(--marron);
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: var(--sombra-chica);
+    }
+
+    .form-container h2 {
+        color: var(--verde-oscuro);
+        margin-bottom: 1rem;
+    }
+
+    form label {
+        color: var(--verde-oscuro);
+    }
+
 }
+
