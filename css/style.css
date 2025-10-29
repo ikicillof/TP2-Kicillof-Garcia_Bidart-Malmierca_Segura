@@ -35,6 +35,8 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background-color: var(--crema);
 }
@@ -143,15 +145,16 @@ header nav ul li a.activo {
 
 main {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     padding: 4rem 0;
     justify-content: center;
+    gap: 1rem;
 }
 
 main h2 {
     text-align: center;
-    padding: 2.5rem;
 }
 
 .mapa {
@@ -286,23 +289,40 @@ main h2 {
 
 footer {
     padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     background-color: var(--negro);
     border: var(--marron) solid 0.25rem;
     color: var(--blanco);
+    gap: 1rem;
 }
-
 
 footer section {
     display: flex;
     justify-content: center;
+    gap: 0.75rem;
 }
 
-footer section nav ul li {
+footer section:nth-child(2) {
+    margin: 0 auto;
+}
+
+footer section ul {
     display: flex;
     gap: 1rem;
+    padding-inline-start: 0;
+    list-style: none;
+    margin: 0;
+}
+
+footer section ul li {
+    display: flex;
+    gap: 1rem;
+}
+
+footer section ul li a {
+    display: flex;
 }
 
 footer section nav ul li:not(:last-child)::after {
@@ -316,70 +336,58 @@ footer a {
     color: var(--blanco);
 }
 
-footer ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-footer ul img {
+#logoFotter {
+    height: 3rem;
     transition: all 0.25s ease;
     box-shadow: unset;
 }
 
-footer ul img:hover {
+#logoFotter:hover {
     transform: scale(1.05);
 }
 
-#logoFotter img{
-    height: 3rem;
-}
-
 #contactos-pag {
-    height: 78vh;
+    padding: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .form-container {
+    gap: 2rem;
     background-color: var(--marron);
-    border-radius: 30%; /* forma ovalada */
-    height: 30rem;
-    width: 39.88rem;
-    padding: 3.5rem;
+    border-radius: 1.5rem;
+    padding: 2rem;
     box-shadow: var(--sombra-grande);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
     overflow: hidden; /* evita que nada se salga del óvalo */
     border: var(--verde-oscuro) 0.25rem solid;
 }
 
 .form-container h2 {
-    margin-bottom: 0.625rem;
+    padding: 0;
     color: var(--blanco);
     text-align: center;
 }
 
 form {
-    width: 85%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     text-align: left;
 }
 
 label {
-    display: block;
-    margin-bottom: 0.0625rem;
     font-weight: bold;
     color: var(--blanco);
 }
 
 input, textarea {
-    width: 100%;
     padding: 0.5rem;
-    margin-bottom: 0.75rem;
-    border-radius: 0.625rem;
+    border-radius: 0.25rem;
     border: 0.0625rem solid var(--gris);
     font-size: 0.875rem;
     box-sizing: border-box;
@@ -388,9 +396,12 @@ input, textarea {
 .terms {
     display: flex;
     align-items: center;
-    margin-bottom: 0.75rem;
-    font-size: 0.8125rem;
-    line-height: 1.2;
+    font-size: 0.8rem;
+    gap: 0.75rem;
+}
+
+.terms a {
+    color: inherit;
 }
 
 .term {
@@ -398,7 +409,7 @@ input, textarea {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-top: 3rem;
+    padding: 2rem;
 }
 
 .term a:hover {
@@ -407,19 +418,7 @@ input, textarea {
 }
 
 .term p {
-    display: flex;
-    width: 30%;
-
-}
-
-.terms input {
-    margin-right: 0.3125rem;
-    transform: scale(1.1); /* un poco más grande y centrado */
-}
-
-.terms label {
-    margin: 0;
-    font-weight: normal;
+    max-width: 45rem;
 }
 
 button {
@@ -522,15 +521,12 @@ button:hover {
 }
 
 .header h2 {
-    padding-left: 5rem;
     padding-top: 1.5rem;
     font-size: 2.5rem;
 }
 
 .header h2+p {
-    padding-left: 5rem;
-    padding-bottom: 1.5rem;
-    padding-top: 1rem;
+    padding: 1rem;
     max-width: 45rem;
 }
 
@@ -642,7 +638,7 @@ button:hover {
         bottom:12px;
         right:12px
     }
-.form-container {
+    .form-container {
         background-color: transparent;
         border: none;
         box-shadow: none;
@@ -659,14 +655,11 @@ button:hover {
     #contactos-pag {
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         height: auto;
-        padding-top: 6rem; /* para que no lo tape el menú */
-        padding-bottom: 3rem;
     }
 
     form {
-        width: 90%;
         background-color: var(--marron);
         padding: 1rem;
         border-radius: 1rem;
@@ -675,12 +668,38 @@ button:hover {
 
     .form-container h2 {
         color: var(--verde-oscuro);
-        margin-bottom: 1rem;
     }
 
     form label {
         color: var(--verde-oscuro);
     }
 
+    .galeria {
+        padding: 0.75rem;
+    }
+
+    .mapa {
+        width: unset;
+        grid-template-columns: 1fr;
+        border-radius: unset;
+        border: none;
+    }
+
+    .carousel {
+        border: none;
+        border-radius: unset;
+        box-shadow: none;
+    }
+
+    #imagenes-s {
+        display: none;
+    }
 }
+
+@media (max-width: 480px) {
+    header div h1 {
+        font-size: 1.5rem;
+    }
+}
+
 

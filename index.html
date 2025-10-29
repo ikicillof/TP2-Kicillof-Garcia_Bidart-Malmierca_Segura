@@ -93,30 +93,28 @@
 		</section>
 	</main>
 	<footer>
-		<section>
-			<nav>
-				<ul>
-					<li><a class="activo" href="./index.html">Inicio</a></li>
-					<li><a href="paginas/flora.html">Flora</a></li>
-					<li><a href="paginas/fauna.html">Fauna</a></li>
-					<li><a href="paginas/excursiones.html">Excursiones</a></li>
-					<li><a href="paginas/contactos.html">Contactos</a></li>
-				</ul>
-			</nav>
-		</section>
-		<section>
-			<ul>
-				<li><a href="https://www.instagram.com/parque.nacional.iguazu/?hl=es"><img src="imagenes/instagram.svg"/></a></li>
-				<li><a href="https://www.facebook.com/ParqueNacIguazu/?locale=es_LA"><img src="imagenes/facebook.svg"/></a></li>
-			</ul>
-		</section>
-		<section>
-			<ul>
-				<li><p>© Copyright 2025, Parque Nacional Iguazú. Todos los derechos reservados</p></li>
-				<li id="logoFotter"><img src="imagenes/emblema_-_pn_iguazu.png"/></li>
-			</ul>
-		</section>
-	</footer>
+        <section>
+        <nav>
+            <ul>
+                <li ><a href="./index.html">Inicio</a></li>
+                <li  class="activo"><a href="paginas/flora.html">Flora</a></li>
+                <li><a href="paginas/fauna.html">Fauna</a></li>
+                <li><a href="paginas/excursiones.html">Excursiones</a></li>
+                <li><a href="paginas/contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+        </section>
+        <section>
+            <ul>
+                <li><a href="https://www.instagram.com/parque.nacional.iguazu/?hl=es"><img src="../imagenes/instagram.svg"></a></li>
+                <li><a href="https://www.facebook.com/ParqueNacIguazu/?locale=es_LA"><img src="../imagenes/facebook.svg"></a></li>
+            </ul>
+        </section>
+        <section>
+            <p>© Copyright 2025, Parque Nacional Iguazú.<br>Todos los derechos reservados</p>
+            <img id="logoFotter" src="../imagenes/emblema_-_pn_iguazu.png">
+        </section>
+    </footer>
 	<script>
 		// Carrusel assistant
 		(function(){
@@ -134,7 +132,7 @@
 			}
 			
 			function setIndex(i){
-				index = i % total;
+				index = Math.max(0, i % total);
 				updatePosition(true);
 				indicators.forEach((b,idx)=>b.classList.toggle('active', idx === index));
 			}

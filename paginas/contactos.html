@@ -39,7 +39,7 @@
             </ul>
         </nav>
     </header>
-     <div id="contactos-pag">
+     <main id="contactos-pag">
          <div class="form-container">
             <h2>Formulario de Contacto</h2>
             <form onsubmit="validarFormulario(event)">
@@ -63,7 +63,7 @@
                 <button type="submit">Enviar</button>
             </form>
         </div>
-     </div>
+    </main>
 
     <script>
         function validarFormulario(event) {
@@ -76,18 +76,15 @@
             location.reload(); // reinicia la página
         }
     </script>
-
-
-
     <footer>
         <section>
         <nav>
             <ul>
-                <li> <a href="../index.html">Inicio</a></li>
-                <li><a href="./flora.html">Flora</a></li>
+                <li ><a href="../index.html">Inicio</a></li>
+                <li  class="activo"><a href="./flora.html">Flora</a></li>
                 <li><a href="./fauna.html">Fauna</a></li>
                 <li><a href="./excursiones.html">Excursiones</a></li>
-                <li class="activo"><a href="./contactos.html">Contactos</a></li>
+                <li><a href="./contactos.html">Contactos</a></li>
             </ul>
         </nav>
         </section>
@@ -98,10 +95,8 @@
             </ul>
         </section>
         <section>
-            <ul>
-                <li><p>© Copyright 2025, Parque Nacional Iguazú. Todos los derechos reservados</p></li>
-                <li id="logoFotter"><img src="../imagenes/emblema_-_pn_iguazu.png"></li>
-            </ul>
+            <p>© Copyright 2025, Parque Nacional Iguazú.<br>Todos los derechos reservados</p>
+            <img id="logoFotter" src="../imagenes/emblema_-_pn_iguazu.png">
         </section>
     </footer>
 </body>
