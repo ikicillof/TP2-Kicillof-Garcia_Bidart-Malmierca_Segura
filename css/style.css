@@ -318,7 +318,7 @@ footer section ul {
 
 footer section ul li {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 footer section ul li a {
@@ -540,7 +540,7 @@ button:hover {
 
 
 #galeria-excursiones {
-    width: 100vw;
+    width: 100vw; 
     overflow: hidden;
     display: flex;
 }
@@ -559,7 +559,6 @@ button:hover {
     flex: 0 0 24rem;
     background-color: var(--crema);
     border-radius: 1.5rem;
-    overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -650,7 +649,7 @@ button:hover {
 
 .parrafo p, .parrafo1 p {
     font-size: 1.1rem;
-    padding: 10rem;
+    padding: 3.2rem;
     color: var(--negro);
     text-align: justify;
 }
@@ -700,7 +699,13 @@ button:hover {
     background-color: var(--crema);
 }
 
-
+#grid-container4 img {
+    width: 100%;
+    max-width: 120rem;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+}
 
 #grid-container4 {
     display: grid;
@@ -712,13 +717,14 @@ button:hover {
     gap: 1rem;
     align-items: center;
     justify-items: center;
-    padding: 5rem 15rem;
+    padding: 5rem 8rem;
     background-color: var(--crema);
 }
 
 .excur{
-    padding: 2rem;
+    padding: 1.5rem;
     font-weight: bold;
+    font-size: 2.5rem;
     text-decoration: underline;
 }
   
@@ -732,11 +738,11 @@ button:hover {
  }
 
 .foto6 {
-    margin-top: -1rem;        
+    margin-top: -5rem;        
     align-self: start;   
 }
 .foto5 {
-    margin-bottom: -4rem;  
+    margin-bottom: -5rem;  
     margin-top: 8rem;              
 }
 
@@ -754,7 +760,7 @@ button:hover {
     gap: 1rem;
     align-items: center;
     justify-items: center;
-    padding: 2rem 15rem;
+    padding: 3rem 15rem;
     background-color: var(--crema);
 }
 
@@ -777,7 +783,7 @@ button:hover {
     gap: 1rem;
     align-items: center;
     justify-items: center;
-    padding: 2rem 15rem;
+    padding: 3rem 15rem;
     background-color: var(--crema);
 }
 #grid-container7 img {
@@ -798,7 +804,7 @@ button:hover {
     gap: 1rem;
     align-items: center;
     justify-items: center;
-    padding: 2rem 15rem;
+    padding: 3rem 15rem;
     background-color: var(--crema);
 }
 
@@ -1027,3 +1033,113 @@ button:hover {
 
 
 
+
+
+@media (max-width: 1150px) {
+
+
+    #grid-container2, #grid-container3, #grid-container4, #grid-container6, #grid-container7 {
+        grid-template-columns: 1fr;
+        padding: 2rem 4rem;
+    }
+
+    #grid-container2 {
+        grid-template-areas:
+            "parraf"
+            "foto1"
+            "foto2"
+            "foto3"
+            "parraf1"
+            "foto4";
+    }
+
+    #grid-container3 {
+        grid-template-areas:
+            "parraf"
+            "foto1"
+            "foto2"
+            "foto3"
+            "parraf1"
+            "foto4";
+    }
+
+    #grid-container4 {
+        grid-template-areas:
+            "parraf"
+            "foto1"
+            "foto2"
+            "foto3"
+            "foto4";
+    }
+
+    #grid-container6 {
+        grid-template-areas:
+            "parraf"
+            "foto1"
+            "foto2"
+            "foto3"
+            "parraf1"
+            "foto4";
+    }
+
+    #grid-container7 {
+        grid-template-areas:
+            "parraf"
+            "parraf1"
+            "foto1"
+            "foto2";
+    }
+
+    .parrafo p, .parrafo1 p, .parrafo3 {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+
+    .excur {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .foto5, .foto6 {
+        margin: 0;
+    }
+
+    .fotoextra {
+        padding: 2rem 3rem;
+        height: auto;      /* se adapta al alto de la imagen */
+    }
+
+    .fotoextra img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    #grid-container5 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "parraf"
+            "foto1"
+            "foto2"
+            "foto3"
+            "foto4"
+            "parraf1"
+            "foto5"
+            "foto6";
+        padding: 2rem 4rem;
+        gap: 1.5rem;
+    }
+
+    #grid-container5 img {
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+
+    .foto5,
+    .foto6 {
+        margin: 0; /* eliminamos los márgenes negativos para evitar solapamiento */
+        align-self: center;
+    }
+}
