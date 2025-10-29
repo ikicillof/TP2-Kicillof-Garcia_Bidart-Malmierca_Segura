@@ -703,3 +703,271 @@ button:hover {
 }
 
 
+
+#galeria-excursiones {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+}
+
+#container {
+    display: flex;
+    gap: 1rem;
+    padding: 5rem;
+    justify-items: center;
+    transition: all 1s ease;
+}
+
+.excursion {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 24rem;
+    background-color: var(--crema);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 1rem;
+}
+
+.excursion img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.excursion h3 {
+    color: var(--marron);
+}
+
+.excursion p {
+    flex: 1;
+    color: var(--negro);
+}
+
+.info {
+    background-color: var(--verde-claro);
+    padding: 0.8rem;
+}
+
+.info a {
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.excursion.activa {
+    z-index: 1;
+    width: 26rem;          
+    transform: scale(1.2);
+    border: 0.2rem solid var(--verde-claro); 
+}
+
+
+#grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "parraf foto1"
+        "foto2 foto3"
+        "parraf1 foto4";
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding: 5rem 15rem;
+    background-color: var(--crema);
+}
+
+.parrafo {
+     grid-area: parraf; }
+.parrafo1 {
+     grid-area: parraf1; 
+    }
+.foto1 {
+     grid-area: foto1;
+     }
+.foto2 {
+     grid-area: foto2;
+     }
+.foto3 { 
+    grid-area: foto3;
+ }
+.foto4 { 
+    grid-area: foto4; 
+}
+.foto5 { 
+    grid-area: foto5;
+}
+.foto6 { 
+    grid-area: foto6; 
+}
+.fotoextra { 
+    width: 100%;
+    padding: 4rem;
+    height: 64rem;
+    Text-align: center;
+}
+
+
+.parrafo p, .parrafo1 p {
+    font-size: 1.1rem;
+    padding: 10rem;
+    color: var(--negro);
+    text-align: justify;
+}
+
+.parrafo3{
+    font-size: 1.5rem;   
+    padding-left: 9rem;
+    padding-right: 9rem;
+    padding-top: 2.5rem;
+    color: var(--negro);
+    text-align: justify;
+}
+
+
+
+#grid-container2 img {
+    width: 100%;
+    max-width: 120rem;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+   
+}
+
+#grid-container3 img {
+    width: 100%;
+    max-width: 120rem;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+   
+}
+
+#grid-container3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "foto1 parraf"
+        "foto2 parraf"
+        "foto3 foto3"
+        "parraf1 foto4";
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding: 5rem 15rem;
+    background-color: var(--crema);
+}
+
+
+
+#grid-container4 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "foto1 foto2 parraf"
+        "foto3 foto4 parraf";
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding: 5rem 15rem;
+    background-color: var(--crema);
+}
+
+.excur{
+    padding: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+  
+
+#grid-container5 img {
+    width: 100%;
+    max-width: 120rem; 
+    height: auto; 
+    border-radius: 1rem; 
+    object-fit: cover;
+ }
+
+.foto6 {
+    margin-top: -1rem;        
+    align-self: start;   
+}
+.foto5 {
+    margin-bottom: -4rem;  
+    margin-top: 8rem;              
+}
+
+
+#grid-container5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+        "foto1 parraf"
+        "foto2 foto3"
+        "foto4 foto4"
+        "parraf1 foto5"
+        "parraf1 foto6 ";
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem 15rem;
+    background-color: var(--crema);
+}
+
+#grid-container6 img {
+    width: 100%;
+    max-width: 120rem; 
+    height: auto; 
+    border-radius: 1rem; 
+    object-fit: cover;
+ }
+
+#grid-container6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "foto1 parraf"
+        "foto2 foto3"
+        "parraf1 foto4";
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem 15rem;
+    background-color: var(--crema);
+}
+#grid-container7 img {
+    width: 100%;
+    max-width: 120rem; 
+    height: auto; 
+    border-radius: 1rem; 
+    object-fit: cover;
+ }
+
+#grid-container7 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto ;
+    grid-template-areas: 
+        "parraf parraf1"
+        "foto1 foto2";
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem 15rem;
+    background-color: var(--crema);
+}
+
+.paginador {
+    display: flex;
+    gap: 0.75rem;
+}

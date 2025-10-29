@@ -38,7 +38,84 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="header">
+            <h2>Excursiones</h2>
+            <p>
+            El Parque Nacional Iguazú ofrece diversas excursiones que permiten disfrutar la selva, los ríos y las impresionantes 
+            cataratas. Cada recorrido brinda una experiencia única para descubrir la naturaleza desde distintos paisajes y sentidos.
+            </p>
+        </div>
     
+    <section id="galeria-excursiones">
+        <div id="container">
+            <div class="excursion">
+                <img src="../imagenes/paseoluna.jpeg" alt="Foto no encontrada.">
+                <h3>Paseo de Luna Llena</h3>
+                <p>La selva de noche despierta las más intensas sensaciones.</p>
+                <div class="info">
+                    <a href="./paseoluna.html">Más info</a>
+                </div>
+            </div>
+        
+            <div class="excursion">
+                <img src="../imagenes/senderoverde.jpeg" alt="Foto no encontrada.">
+                <h3>Sendero Verde</h3>
+                <p>Caminata breve para admirar la naturaleza del parque.</p>
+                <div class="info">
+                    <a href="./senderoverde.html">Más info</a>
+                </div>
+            </div>
+        
+            <div class="excursion">
+                <img src="../imagenes/gargantadeldiablo.jpeg" alt="Foto no encontrada.">
+                <h3>Garganta del Diablo</h3>
+                <p>El balcón con la vista más impactante del parque.</p>
+                <div class="info">
+                    <a href="./gargantadeldiablo.html">Más info</a>
+                </div>
+            </div>
+            <div class="excursion">
+                <img src="../imagenes/paseoluna.jpeg" alt="Foto no encontrada.">
+                <h3>Paseo de Luna Llena</h3>
+                <p>La selva de noche despierta las más intensas sensaciones.</p>
+                <div class="info">
+                    <a href="./paseoluna.html">Más info</a>
+                </div>
+            </div>
+        
+            <div class="excursion">
+                <img src="../imagenes/senderoverde.jpeg" alt="Foto no encontrada.">
+                <h3>Sendero Verde</h3>
+                <p>Caminata breve para admirar la naturaleza del parque.</p>
+                <div class="info">
+                    <a href="./senderoverde.html">Más info</a>
+                </div>
+            </div>
+        
+            <div class="excursion">
+                <img src="../imagenes/gargantadeldiablo.jpeg" alt="Foto no encontrada.">
+                <h3>Garganta del Diablo</h3>
+                <p>El balcón con la vista más impactante del parque.</p>
+                <div class="info">
+                    <a href="./gargantadeldiablo.html">Más info</a>
+                </div>
+            </div>
+        </section>
+        </div>
+    <div class="paginador">
+        <button id="prev">
+            <label>
+				<span class="material-symbols-outlined">arrow_back</span>
+			</label>
+        </button>
+        <button id="next">
+            <label>
+				<span class="material-symbols-outlined">arrow_forward</span>
+			</label>
+        </button>
+    </div>
+    </main>
     <footer>
         <section>
         <nav>
@@ -63,4 +140,34 @@
         </section>
     </footer>
 </body>
+
+	<script>
+		// Carrusel assistant
+		(function(){
+            let index = 0;
+            const prev = document.querySelector('#prev')
+            const next = document.querySelector('#next')
+            prev.addEventListener('click', () => setIndex(index - 1))
+            next.addEventListener('click', () => setIndex(index + 1))
+            const container = document.querySelector('#container')
+            const excursiones = document.querySelectorAll('.excursion')
+            const total = excursiones.length;
+            
+            function updatePosition(){
+                container.style.transform = `translateX(-${index * excursiones[0].clientWidth}px)`;
+                excursiones.forEach((excursion, i) => {
+                    excursion.classList.toggle('activa', i === index + 1)
+                }
+            )
+            }
+
+            function setIndex(i){
+                index = Math.max(0, i % (total - 1));
+                updatePosition();
+            }
+
+			setIndex(0);
+		})();
+	</script>
+
 </html>
