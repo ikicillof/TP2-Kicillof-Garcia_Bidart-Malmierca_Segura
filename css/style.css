@@ -661,6 +661,8 @@ button:hover {
     padding-top: 2.5rem;
     color: var(--negro);
     text-align: justify;
+    text-align: center;
+
 }
 
 
@@ -726,6 +728,8 @@ button:hover {
     font-weight: bold;
     font-size: 2.5rem;
     text-decoration: underline;
+    text-align: center;
+
 }
   
 
@@ -738,11 +742,11 @@ button:hover {
  }
 
 .foto6 {
-    margin-top: -5rem;        
+    margin-top: -2rem;        
     align-self: start;   
 }
 .foto5 {
-    margin-bottom: -5rem;  
+    margin-bottom: -2rem;  
     margin-top: 8rem;              
 }
 
