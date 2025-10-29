@@ -538,171 +538,6 @@ button:hover {
     background-color: var(--crema);
 }
 
-@media(max-width:480px){.carousel{height:360px}.slide-text{max-width:90%}}
-
-@media (max-width: 780px) {
-
-    html {
-        font-size: 14px;
-    }
-
-    header {
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-between;
-        height: var(--header-altura);
-    }
-
-    header div {
-        display: flex;
-        justify-content: center;
-    }
-
-    header div h1 {
-        flex: 1;
-        font-size: 2rem;
-    }
-
-    header div #imagenHeder {
-        display: flex;
-        height: 3rem;
-    }
-
-    header nav {
-        align-items: center;
-        background-color: unset;
-    }
-
-    header nav label {
-        display: flex;
-    }
-
-    header nav input[type=checkbox]:not(:checked)+ul {
-        display: none;
-    }
-
-    header nav ul {
-        min-width: 30vw;
-        position: fixed;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        background-color: var(--verde-claro);
-        height: 100dvh;
-        align-items: stretch;
-        z-index: 2;
-        animation: menu 1s ease;
-    }
-
-    @keyframes menu {
-        from {
-            transform: translateX(-30vw);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
-
-    header nav ul li {
-        justify-content: stretch;
-    }
-
-    header nav ul li.close {
-        height: var(--header-altura);
-        align-items: center;
-    }
-    
-    header nav ul li.close label span { 
-        color: var(--negro);
-     }
-
-    header nav ul li a {
-        flex: 1;
-        border-bottom: unset;
-        border-left: 0.5rem transparent solid;
-    }
-
-    header nav ul li a.activo {
-    border-color: var(--negro);
-}
-
-    .carousel {
-        height:420px
-    }
-    
-    .overlay {
-        padding:18px
-    }
-    
-    .indicators {
-        bottom:12px;
-        right:12px
-    }
-    .form-container {
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        border-radius: 0;
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Acomoda el formulario dentro */
-    #contactos-pag {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-    }
-
-    form {
-        background-color: var(--marron);
-        padding: 1rem;
-        border-radius: 1rem;
-        box-shadow: var(--sombra-chica);
-    }
-
-    .form-container h2 {
-        color: var(--verde-oscuro);
-    }
-
-    form label {
-        color: var(--verde-oscuro);
-    }
-
-    .galeria {
-        padding: 0.75rem;
-    }
-
-    .mapa {
-        width: unset;
-        grid-template-columns: 1fr;
-        border-radius: unset;
-        border: none;
-    }
-
-    .carousel {
-        border: none;
-        border-radius: unset;
-        box-shadow: none;
-    }
-
-    #imagenes-s {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    header div h1 {
-        font-size: 1.5rem;
-    }
-}
-
-
 
 #galeria-excursiones {
     width: 100vw;
@@ -971,3 +806,224 @@ button:hover {
     display: flex;
     gap: 0.75rem;
 }
+
+@media (max-width: 780px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--header-altura);
+    }
+
+    header div {
+        display: flex;
+        justify-content: center;
+    }
+
+    header div h1 {
+        flex: 1;
+        font-size: 2rem;
+    }
+
+    header div #imagenHeder {
+        display: flex;
+        height: 3rem;
+    }
+
+    header nav {
+        align-items: center;
+        background-color: unset;
+    }
+
+    header nav label {
+        display: flex;
+    }
+
+    header nav input[type=checkbox]:not(:checked)+ul {
+        display: none;
+    }
+
+    header nav ul {
+        min-width: 30vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        background-color: var(--verde-claro);
+        height: 100dvh;
+        align-items: stretch;
+        z-index: 2;
+        animation: menu 1s ease;
+    }
+
+    @keyframes menu {
+        from {
+            transform: translateX(-30vw);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    header nav ul li {
+        justify-content: stretch;
+    }
+
+    header nav ul li.close {
+        height: var(--header-altura);
+        align-items: center;
+    }
+    
+    header nav ul li.close label span { 
+        color: var(--negro);
+     }
+
+    header nav ul li a {
+        flex: 1;
+        border-bottom: unset;
+        border-left: 0.5rem transparent solid;
+    }
+
+    header nav ul li a.activo {
+    border-color: var(--negro);
+}
+
+    .carousel {
+        height:420px
+    }
+    
+    .overlay {
+        padding:18px
+    }
+    
+    .indicators {
+        bottom:12px;
+        right:12px
+    }
+    .form-container {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Acomoda el formulario dentro */
+    #contactos-pag {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    form {
+        background-color: var(--marron);
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: var(--sombra-chica);
+    }
+
+    .form-container h2 {
+        color: var(--verde-oscuro);
+    }
+
+    form label {
+        color: var(--verde-oscuro);
+    }
+
+    .galeria {
+        padding: 0.75rem;
+    }
+
+    .mapa {
+        width: unset;
+        grid-template-columns: 1fr;
+        border-radius: unset;
+        border: none;
+    }
+
+    .carousel {
+        border: none;
+        border-radius: unset;
+        box-shadow: none;
+    }
+
+    #imagenes-s {
+        display: none;
+    }
+
+   .paginador {
+    display: none;
+   }
+
+    #container {
+        flex-direction: column;
+    }
+     .excursion.activa {
+    z-index: 0;
+    width: 100%;          
+    transform: none;
+    border: unset; 
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    
+    #galeria-excursiones {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    header div h1 {
+        font-size: 1.5rem;
+    }
+    .carousel {
+        height:360px
+    }
+    .slide-text {
+        max-width:90%
+    }
+    .paginador {
+        display: none;
+    }
+
+     #container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .excursion.activa {
+    z-index: 0;
+    width: 100%;          
+    transform: none;
+    border: unset; 
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    #galeria-excursiones {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+
+

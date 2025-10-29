@@ -153,7 +153,22 @@
             const excursiones = document.querySelectorAll('.excursion')
             const total = excursiones.length;
             
-            function updatePosition(){
+            function aplicarClaseResponsive() {
+                    const elements = document.querySelectorAll('.excursion');
+                    if (window.innerWidth < 780) {
+                        elements.forEach(el => el.classList.add('activa'));
+                    } else {
+                        elements.forEach(el => el.classList.remove('activa')); // opcional
+                    }
+                }
+
+                // Al cargar la página
+                aplicarClaseResponsive();
+
+                // Al cambiar el tamaño
+                window.addEventListener('resize', aplicarClaseResponsive);
+
+                            function updatePosition(){
                 container.style.transform = `translateX(-${index * excursiones[0].clientWidth}px)`;
                 excursiones.forEach((excursion, i) => {
                     excursion.classList.toggle('activa', i === index + 1)
@@ -168,6 +183,7 @@
 
 			setIndex(0);
 		})();
+
 	</script>
 
 </html>
